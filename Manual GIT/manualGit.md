@@ -118,3 +118,22 @@ Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sis
 - **Integración con IDEs y editores de código**: muchos IDEs y editores de código tienen integración directa con Git, lo que permite realizar operaciones de control de versiones directamente desde el entorno de desarrollo. Por ejemplo Visual Studio Code.
   _Ventajas_: integración perfecta lo que permite la fluidez del flujo de trabajo. También podemos encontrar funcionalidades adicionales.
   _Inconvenientes_: dependencia del IDE.
+
+6. Integración con otras herramientas
+   Git es una herramienta de control de versiones distribuido que proporciona potentes capacidades de seguimiento de cambios y colaboración. Sin embargo, su valor se maximiza cuando se integra con otras herramientas y tecnologías que complementan su funcionalidad y mejoran el flujo de trabajo del equipo y la colaboración en proyectos.
+
+Diferentes tipos de integraciones:
+
+- **Integración con sistemas de control de versiones centralizados**: como por ejemplo **Subversion (SVN)**, permite trabajar con ambos sistemas en un entorno híbrido. Herramientas como **git-svn** facilitan la migración de SVN a Git y el uso conjunto de ambas plataformas. Esto ofrece flexibilidad a los equipos para aprovechar las ventajas de Git mientras trabajan con repositorios SVN existentes.
+
+- **Integración con servicios de alojamiento de repositorios**: Git se integra con servicios de alojamiento de repositorios como **GitHub, GitLab y Bitbucket**. Los equipos pueden utilizar estas plataformas para alojar, colaborar y compartir repositorios Git, así como aprovechar características adicionales como la revisión de código, la gestión de problemas y la integración continua.
+
+- **Integración con herramientas de gestión de proyectos**: Git se puede integrar con herramientas de gestión de proyectos como **Jira, Trello, Asana**, entre otras. Los equipos pueden vincular commits, ramas y problemas de Git a elementos de seguimiento en estas herramientas para mejorar la trazabilidad y la gestión de tareas.
+
+- **Integración con herramientas de integración continua (CI)**: Git se integra con herramientas de CI/CD como **Jenkins, Travis CI, CircleCI**, etc. Estas herramientas pueden utilizar Git para desencadenar y automatizar pipelines de CI/CD basados en cambios en el repositorio.
+
+- **Integración con IDEs y editores de código**: Git se integra con IDEs populares como **Visual Studio, IntelliJ IDEA, Eclipse**, así como con editores de código como **Visual Studio Code, Sublime Text, Atom**, entre otros. Estas herramientas proporcionan funcionalidades integradas de control de versiones, como la visualización de historial, la resolución de conflictos y la gestión de ramas.
+  Un ejemplo de integración de GIT en Visual Studio Code:
+  ![Visual Studio Code y GIT](vsc.png)
+
+- **Integración con herramientas de revisión de código**: Git se integra con herramientas de revisión de código como **Gerrit, Crucible, Review Board**, entre otras. Estas herramientas facilitan la revisión y discusión de cambios de código dentro del contexto de un repositorio Git.

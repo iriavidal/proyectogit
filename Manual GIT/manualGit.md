@@ -104,5 +104,17 @@ Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sis
 
 (Es útil mencionar que antes de ejecutar git push, es recomendable ejecutar git pull o git fetch para asegurarse de que el repositorio local esté actualizado con los cambios más recientes del repositorio remoto)
 
-5. Distintos tipos de clientes
-6. Integración con otras herramientas??
+5. **Distintos tipos de clientes**
+   Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
+
+- **Interfaz de línea de comandos (CLI)**: éste es el cliente original de Git y proporciona acceso completo a todas las funcionalidades de Git a través de comandos de texto en la línea de comandos _(para información sobre comandos véase el punto 4 de este manual)_. Se caracteriza por su mayor potencia y flexibilidad.
+  _Ventajas_: como antes mencionado, la potencia y flexibilidad, pero también a mayores su eficiencia y rapidez.
+  _Inconvenientes_: Curva de aprendizaje empinada y un poco intimidante al principio, y también mayor propensión a errores.
+
+- **Interfaces gráficas de usuario (GUI)**: éstas son aplicaciones con interfaces gráficas que proporcionan una forma más visual e intuitiva de interactuar con Git. Ejemplos populares incluyen GitKraken (multiplataforma), Sourcetree (para Windows) o GitUp (para Mac).
+  _Ventajas_: al contrario de la CLI, son más intuitivas y visuales, y tienen una menor curva de aprendizaje.
+  _Inconvenientes_: menor flexibilidad y dependencia del software.
+
+- **Integración con IDEs y editores de código**: muchos IDEs y editores de código tienen integración directa con Git, lo que permite realizar operaciones de control de versiones directamente desde el entorno de desarrollo. Por ejemplo Visual Studio Code.
+  _Ventajas_: integración perfecta lo que permite la fluidez del flujo de trabajo. También podemos encontrar funcionalidades adicionales.
+  _Inconvenientes_: dependencia del IDE.

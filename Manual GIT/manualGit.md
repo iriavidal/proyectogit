@@ -1,38 +1,97 @@
-#MANUAL DE GIT
+# MANUAL DE GIT
 
-##ÍNDICE DE CONTENIDOS
+## ÍNDICE DE CONTENIDOS
 
 1. Conceptos
 2. Funcionamiento
 3. Ventajas
 
-4. Comandos básicos
+4. **Comandos básicos**
 
-### GIT CONFIG
+### CONFIGURACIÓN DE GIT (GIT CONFIG)
 
-- git config --global user.name "tunombre": establece el nombre de usuario
-- git config --global user.email "tuemail": establece el correo electrónico
-- git config --global color.ui auto: activa el coloreado de la salida
-- git config --global merge.conflictstyle diff3: muestra el estado original en los conflictos
-- git config --list: muestra la configuración
+- **git config --global user.name "tunombre"**: establece el nombre de usuario
+- **git config --global user.email "tuemail"**: establece el correo electrónico
+- **git config --list**: muestra la configuración
 
-### CREACIÓN DE UN REPOSITORIO NUEVO
+### CREACIÓN DE REPOSITORIOS (GIT INIT)
 
-- git init <nombre-repositorio>: crea una nueva carpeta con el nombre del repositorio que a su vez contiene otra carpeta oculta llamada **.git** que contiene la base de datos donde se registran los cambios en el repositorio.
+- **git init "nombre-repositorio"**: crea una nueva carpeta con el nombre del repositorio que a su vez contiene otra carpeta oculta llamada **.git** que contiene la base de datos donde se registran los cambios en el repositorio.
+  ("nombre-repositorio" es opcional. Si se proporciona, crea una carpeta con ese nombre y convierte esa carpeta en un repositorio Git, pero si no se proporciona, simplemente convierte el directorio actual en un repositorio Git)
 
-### COPIA DE REPOSITORIOS
+### COPIA DE REPOSITORIOS (GIT CLONE)
 
-- git clone <url-repositorio>: crea una copia local del repositorio que se le indica. Una vez creada la copia los dos repositorios (original y copia) son independientes el uno del otro.
+- **git clone "url-repositorio"**: crea una copia local del repositorio que se le indica. Una vez creada la copia los dos repositorios (original y copia) son independientes el uno del otro.
+  (Si no se especifica un "nombre-repositorio" después de la URL, Git automáticamente utilizará el nombre del repositorio remoto para crear la carpeta local.)
 
-### GIT ADD
+### AÑADIR CAMBIOS A LA ZONA DE INTERCAMBIO TEMPORAL (GIT ADD)
 
-- git add <fichero>: añade los cambios en el fichero del directorio de trabajo a la zona de intercambio temporal.
-- git add <carpeta>: añade los cambios en todos los ficheros de la carpeta del directorio de trabajo a la zona de intercambio temporal.
-- git add .: añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
+- **git add "fichero"**: añade los cambios en el fichero del directorio de trabajo a la zona de intercambio temporal.
+- **git add "carpeta"**: añade los cambios en todos los ficheros de la carpeta del directorio de trabajo a la zona de intercambio temporal.
+- **git add .**: añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
+- **git remote add "repositorio-remoto" "url"**: crea un enlace con el nombre "repositorio-remoto" a un repositorio remoto ubicado en la dirección "url".
 
-### GIT COMMIT
+### AÑADIR CAMBIOS AL REPOSITORIO (GIT COMMIT)
 
-- git commit -m "mensaje": confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto. ()
+- **git commit -m "mensaje"**: confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto.
+- **git commit**: realiza la misma acción que el anterior pero en vez de escribir directamente el mensaje en el comando se abrirá un editor de texto donde se puede escribir el mensaje.
+- **git commit --amend -m "mensaje"**: cambia el mensaje del último commit por el nuevo mensaje.
+
+### REGLAS DE REDACCIÓN DE COMMITS
+
+- Título en mayúsculas, corto, conciso e imperativo.
+- Breve texto que explique qué hace el commit y por qué, evitando el cómo. También en presente e imperativo.
+- Información adicional como el número del ticket que cierra este cambio o los tickets relacionados.
+
+![directorio de trabajo -> área de preparación -> repositorio](./img/flujo_git.png "Flujo de trabajo de Git")
+
+### MOSTRAR ESTADO DE UN REPOSITORIO (GIT STATUS)
+
+- **git status**: muestra el estado de los cambios en el repositorio desde la última versión guardada.
+
+### MOSTRAR HISTORIAL DE VERSIONES DE UN REPOSITORIO (GIT LOG)
+
+- **git log**: muestra el historial de commits de un repositorio ordenado cronológicamente. Para cada commit muestra su código hash, el autor, la fecha, la hora y el mensaje asociado.
+
+### MOSTRAR DATOS DE UN COMMIT (GIT SHOW)
+
+- **git show**: muestra el usuario, el día, la hora y el mensaje del último commit, así como las diferencias con el anterior.
+- **git show "commit"**: muestra el usuario, el día, la hora y el mensaje del commit indicado, así como las diferencias con el anterior.
+
+### MOSTRAR LAS DIFERENCIAS ENTRE VERSIONES (GIT DIFF)
+
+- **git diff**: muestra las diferencias entre el directorio de trabajo y la zona de intercambio temporal.
+- **git diff --cached**: muestra las diferencias entre la zona de intercambio temporal y el último commit.
+- **git diff HEAD**: muestra la diferencia entre el directorio de trabajo y el último commit.
+
+### ELIMINAR CAMBIOS
+
+- **git checkout "commit" -- "file"**: actualiza el fichero "file" a la versión correspondiente al commit.
+- **git reset "fichero"**: elimina los cambios del fichero de la zona de intercambio temporal, pero preserva los cambios en el directorio de trabajo.
+- **git reset --hard "commit"**: elimina todos los cambios desde el commit y actualiza el HEAD a este commit.
+- **git reset "commit"**: actualiza el HEAD al commit, es decir, elimina todos los commits posteriores a este commit, pero no elimina los cambios del directorio de trabajo.
+
+### RAMAS
+
+- **git branch "rama"**: crea una nueva rama con el nombre "rama" en el repositorio a partir del último commit.
+- **git branch**: muestra las ramas activas de un repositorio indicando con \* la rama activa en ese momento.
+- **git branch -d "rama"**: elimina la rama de nombre "rama" siempre y cuando haya sido fusionada previamente.
+- **git branch -D "rama"**: elimina la rama de nombre "rama" incluso si no ha sido fusionada. Si la rama no ha sido fusionada previamente se perderán todos los cambios de esa rama.
+
+- **git log**: muestra la historia del repositorio.
+
+- **git checkout "rama"**: actualiza los cheros del directorio de trabajo a la última versión del repositorio correspondiente a la rama rama", y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama.
+- **git checkout -b "rama"**: crea una nueva rama con el nombre "rama" y la activa. Este comando es equivalente aplicar los comandos git branch "rama" y después git checkout "rama".
+
+- **git merge "rama"**: integra los cambios de la rama "rama" en la rama actual.
+
+### CAMBIOS DESDE UN REPOSITORIO REMOTO
+
+- **git pull "remoto" "rama"**: descarga los cambios de la rama del repositorio remoto y los integra en la última versión del repositorio local, es decir, en el HEAD.
+- **git fetch "remoto"**: descarga los cambios del repositorio remoto pero no los integra en la última versión del repositorio local.
+- **git push "remoto" "rama"**: sube al repositorio remoto los cambios de la rama en el repositorio local.
+
+(Es útil mencionar que antes de ejecutar git push, es recomendable ejecutar git pull o git fetch para asegurarse de que el repositorio local esté actualizado con los cambios más recientes del repositorio remoto)
 
 5. Distintos tipos de clientes
 6. Integración con otras herramientas??

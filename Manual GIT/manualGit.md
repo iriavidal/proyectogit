@@ -104,6 +104,8 @@ Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sis
 
 (Es útil mencionar que antes de ejecutar git push, es recomendable ejecutar git pull o git fetch para asegurarse de que el repositorio local esté actualizado con los cambios más recientes del repositorio remoto)
 
+https://aprendeconalf.es/docencia/git/manual/manual-git.pdf
+
 5. **Distintos tipos de clientes**
    Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
 
@@ -118,6 +120,9 @@ Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sis
 - **Integración con IDEs y editores de código**: muchos IDEs y editores de código tienen integración directa con Git, lo que permite realizar operaciones de control de versiones directamente desde el entorno de desarrollo. Por ejemplo Visual Studio Code.
   _Ventajas_: integración perfecta lo que permite la fluidez del flujo de trabajo. También podemos encontrar funcionalidades adicionales.
   _Inconvenientes_: dependencia del IDE.
+
+  https://git-scm.com/book/es/v2/Ap%C3%A9ndice-A%3A-Git-en-otros-entornos-Interfaces-gr%C3%A1ficas
+  https://git-scm.com/book/es/v2/Ap%C3%A9ndice-B%3A-Integrando-Git-en-tus-Aplicaciones-Git-mediante-L%C3%ADnea-de-Comandos
 
 6. Integración con otras herramientas
    Git es una herramienta de control de versiones distribuido que proporciona potentes capacidades de seguimiento de cambios y colaboración. Sin embargo, su valor se maximiza cuando se integra con otras herramientas y tecnologías que complementan su funcionalidad y mejoran el flujo de trabajo del equipo y la colaboración en proyectos.
@@ -137,3 +142,5 @@ Diferentes tipos de integraciones:
   ![Visual Studio Code y GIT](vsc.png)
 
 - **Integración con herramientas de revisión de código**: Git se integra con herramientas de revisión de código como **Gerrit, Crucible, Review Board**, entre otras. Estas herramientas facilitan la revisión y discusión de cambios de código dentro del contexto de un repositorio Git.
+
+https://git-scm.com/book/es/v2/Git-y-Otros-Sistemas-Git-como-Cliente

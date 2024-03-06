@@ -14,7 +14,74 @@ Los sistemas de control de versiones o VCS permiten registrar todos los cambios 
 
 Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sistemas centralizados a, finalmente, sistemas distribuidos como es el caso de GIT. Estos últimos han supuesto un avance con respecto a los sistemas anteriores ya que, debido a su funcionamiento, solucionaron muchos de los problemas que acarreaban hasta ese momento los sistemas centralizados, como la pérdida de datos o la incapacidad de trabajar en el proyecto en caso de que se cayese el servidor donde estaba alojado.
 
-2. Funcionamiento
+2. ## Funcionamiento
+
+Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, sino que realiza una instantánea de esa versión guardando su referencia.
+
+![Manejo de los datos en Git](./img/checkins.jpg)
+
+Otro de los aspectos clave del funcionamiento de Git es la integridad, ya que posee un sistema de verificado (checksum) por el cual todos los cambios efectuados en el proyecto serán detectados, impidiendo la pérdida de información. Esta suma de comprobación se realiza mediante el hash SHA-1, el cual también es usado por Git como identificador para guardar toda la información.
+
+***Los tres estados***
+El aspecto más importante para poder entender el funcionamiento interno de GIT, es que presenta tres estados diferentes:
+- confirmado **(committed)** : los datos están almacenados localmente.
+- modificado **(modified)** : el fichero o proyecto ha sido modificado pero no se han confirmado los cambios.
+- preparado **(staged)** : todas las modificaciones del proyecto se han registrado en su versión más reciente a la espera de ser confirmadas (hacer commit).
+
+![Tres estados](./img/tres_estados.jpg)
+
+La existencia de estos tres estados, implica la existencia de tres secciones diferentes dentro de cualquier proyecto en Git, lo que se conoce como  __arquitectura de tres árboles__:
+- Directorio de trabajo: es una copia de una de las versiones del proyecto, que permite el uso y modificación de los diferentes archivos del proyecto.
+- Área de preparación o "index": es la sección donde se almacena la información que será incluida en el siguiente commit.
+- Directorio de Git: es la principal sección de Git, en la cual se almacenan los metadatos y la base de datos de objetos del proyecto. También es la sección que se copia al realizar una clonación desde un equipo local. Para ser más precisos, el "index" también está incluído dentro del directorio de GIT, como se muestra en la siguiente imagen, pero se separa en la explicación para una mejor comprensión del flujo de trabajo de Git.
+
+![Arquitectura de tres árboles](./img/tres_arboles.jpg)
+
+Por lo tanto, el flujo de trabajo más básico en GIT sería el siguiente:
+- Se modifica el proyecto en el directorio de trabajo local.
+- Se preparan los archivos y se añaden al área de preparación o index.
+- Se confirman los cambios (commit) y se realiza una instantánea en el directorio de Git.
+
+### Directorio de GIT (.git)
+
+El directorio .git, es la sección más importante de las mencionadas anteriormente, por eso se debe dedicar un apartado específico para explicar su estructura interna. Este directorio está formado, entre otros, por estos componentes:
+
+1. Directorio objects/ 
+
+En este directorio se almacenan los objetos, como los datos de los ficheros, los commits, los árboles y las Tags.
+
+2. Directorio refs
+
+En este directorio se almacenan las referencias de las distintas versiones del proyecto.
+
+3. Directorio logs
+
+En este directorios se guardan todos los cambios del proyecto.
+
+4. Directorio worktrees
+
+En todo proyecto de git existe un árbol de trabajo principal, pero pueden aparecen diferentes árboles de trabajo vinculados. En este directorio, se almacenan las relaciones del árbol principal con cada uno de los árboles de trabajo vinculados.
+
+5. Fichero HEAD
+
+Este fichero es importante para entender el funcionamiento de Git. En él se guarda la referencia simbólica de la rama en la que se trabaja en cada momento. Es decir, es a donde apunta el puntero para realizar las diferentes operaciones.
+
+6. Fichero config
+
+En este ficher se guarda la configuración de Git, como equipos remotos, el flujo de las ramas, etc.
+
+7. Fichero Index
+
+Este fichero es el más importante del directorio de Git. Se almacenan todos los cambios a la espera de ser confirmados, en forma de lista ordenada de rutas.
+
+
+    https://learn.microsoft.com/es-es/archive/msdn-magazine/2017/august/devops-git-internals-architecture-and-index-files
+
+    https://www.siteground.es/kb/estructura-git-contenido-repositorio/#:~:text=El%20index%20de%20GIT%20se,en%20tu%20directorio%20de%20trabajo.
+
+    https://ed.team/blog/trabaja-en-dos-o-mas-ramas-de-git-al-mismo-tiempo
+
+
 3. Ventajas
 
 4. **Comandos básicos**

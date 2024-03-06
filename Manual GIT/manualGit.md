@@ -82,7 +82,22 @@ Este fichero es el más importante del directorio de Git. Se almacenan todos los
     https://ed.team/blog/trabaja-en-dos-o-mas-ramas-de-git-al-mismo-tiempo
 
 
-3. Ventajas
+3. ## Ventajas
+
+GIT se ha convertido en el estándar mundial como sistema de control de versiones debido a las numerosas ventajas que aporta con respecto a otros sistemas anteriores. El hecho de ser un programa de código abierto y gratuito, ha favorecido que se haya formalizado como una herramienta imprescindible para empresas y particulares para el desarrollo de proyectos.
+
+Una de las mayores ventajas de Git es que, como se comentó anteriormente, es un sistema distribuido, lo que permite una mayor flexibilidad en la elaboración de proyectos colaborativos. Esta naturaleza distribuida también permite adoptar diferentes estrategias en el flujo de trabajo como Administrador-Integración, Dictador-Teniente, etc.
+
+En el punto anterior, se mencionaba que Git utiliza un checksum para mantener la integridad de los datos. Este sistema de seguridad es altamente beneficioso ya que evita la pérdida de información al estar todos los cambios identificados por el hash. Otro aspecto que mejora la seguridad en git es la forma de trabajar en local, ya que mientras los cambios no se confirman mediante un commit, todas las operaciones y todos los cambios se mantienen en el repositorio local, lo cual permite corregir errores y evitar la corrupción de los datos. 
+
+Otra de las ventajas de Git, es la forma en la que se manejan los cambios, almacenándolos como instantáneas en un sistema de miniaturas. Esto, junto al uso del almacenamiento local, mejora la velocidad y la eficiencia al realizar diferentes operaciones, como commit o merge. Además, el hecho de que se almacenen instantáneas incrementales de todos los cambios realizados, permite revertir el trabajo a versiones anteriores pudiendo solucionar errores con facilidad. 
+
+La existencia de ramas y su manejo sencillo permite la elaboración en pararelo de diferentes partes del proyecto, pudiendo dividir el trabajo de forma más eficiente y facilitando el trabajo colaborativo entre diferentes equipos en proyectos de gran envergadura. 
+
+Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto. 
+
+    https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos
+
 
 4. **Comandos básicos**
 

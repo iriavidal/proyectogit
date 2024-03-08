@@ -34,6 +34,49 @@ Estas ramas sirven para arreglar aquellos errores que deban ser correjidos rápi
 ![Esquema ramas gitflow](./img/esquema.png)
 
 
-5. COMANDOS DEL WRAPPER DE GITFLOW
+5. ## COMANDOS DEL WRAPPER DE GITFLOW
 
+Usar la biblioteca de extensiones de git flow permite reducir las operaciones de git, ya que agrupa diferentes comandos en una sola instrucción.
+
+- **git flow init**: inicia un repositorio de git usando las extensiones de git-flow, creando la rama develop directamente. 
+
+![Ejemplo de uso de git flow init](./img/init.png)
+
+- **git flow feature start myfeature**: permite crear una nueva rama feature a partir de develop para añadir una nueva funcionalidad al código. 
+
+![Ejemplo de uso feature start](./img/feature_start.png)
+
+- **git flow feature finish myfeature**: este comando cambia la rama a develop y fusiona en ella la feature/myfeature. 
+
+![Ejemplo de uso feature finish](./img/feature_finish.png)
+
+- **git flow feature publish myfeature**: publica la feature en el servidor remoto. Equivalente a usar git push. 
+
+- **git flow feature pull origin myfeature**: permite añadir al repositorio local, la funcionalidad contenida en el servidor remoto.
+
+- **git flow feature track myfeature**: permite visualizar el historial de cambios de la feature.
+
+- **git flow release start 1.0.0**: cambia la rama a develop y desde ella crea una nueva rama release con la versión 1.0.0. 
+
+![Ejemplo de uso release start](./img/release_start.png)
+
+- **git flow release publish 1.0.0**: publica la release en el servidor remoto. Equivalente a usar git push. s
+
+- **git flow release track 1.0.0**: permite ver el historial de cambios en la release.
+
+- **git flow release finish '1.0.0'**: cambia la rama a master y fusiona en esta la release añadiendo como TAG el nombre de esta. También cambia a develop y fusiona en ella la release. Después, la release es eliminada.
+
+![Ejemplo de uso de release finish](./img/release_finish.png)
+
+- **git flow hotfix start myfix**: cambia la rama a master y crea una nueva rama hotfix para arreglar el error. 
+
+![Ejemplo de uso hotfix start](./img/hotfix_start.png)
+
+- **git flow hotfix finish myfix**: cambia la rama a main y fusiona en esta la rama hotfix. También cambia la rama a develop y fusiona la hotfix en ella. Finalmente, se elimina la rama hotfix.
+
+![Ejemplo de uso de hotfix finish](./img/hotfix_finish.png)
+
+
+ https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
+ https://danielkummer.github.io/git-flow-cheatsheet/ 
 

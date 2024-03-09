@@ -45,7 +45,102 @@ https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 https://keepcoding.io/blog/que-es-gitflow/
 https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
 
-3. WORKFLOWS: ALTERNATIVAS A GIT FLOW
+3. ## WORKFLOWS: ALTERNATIVAS A GIT FLOW
+
+Existen diversos workflows alternativos a Git Flow que ofrecen enfoques diferentes para la gestión de ramas y versiones en proyectos de desarrollo de software. Estos workflows, adaptados a las necesidades específicas de cada equipo o proyecto, pueden proporcionar una mayor flexibilidad y eficiencia en el flujo de trabajo colaborativo.
+
+### Github Flow
+
+![Esquema Github Flow](./img/GitHub_Flow.jpg)
+GitHub Flow es un proceso que se distingue de GitFlow por la ausencia de la rama "develop". Se fundamenta en los siguientes principios:
+
+- Todo lo que esté en la rama principal ("master") debe ser desplegado.
+- Para cada nueva característica, creamos una rama de la rama principal usando un nombre descriptivo.
+- Hacemos commits en esta rama localmente y realizamos un push con el mismo nombre en el servidor.
+- Si necesitamos retroalimentación, empleamos herramientas de mergeo como solicitudes de extracción (pull request).
+- Una vez que se ha revisado el código, podemos fusionarlo con la rama principal.
+- Después de la fusión con la rama principal, desplegamos los cambios.
+
+**Pros:**
+
+- Compatible y fácil de usar con las herramientas actuales de Integración Continua/Entrega Continua (CI/CD).
+- Recomendado para características de corta duración (diarias o incluso de horas).
+- Un flujo ligero y aconsejado si el proyecto requiere una entrega de valor constante.
+
+**Contras:**
+
+- La rama principal ("master") puede volverse inestable si no se utilizan adecuadamente las herramientas de pruebas y solicitudes de extracción.
+- No es recomendado para múltiples entornos productivos.
+- Dependiendo del producto, pueden existir restricciones en los despliegues, especialmente en aplicaciones como Servicios de Software como un Servicio (SaaS).
+
+### GitLab Flow
+
+![Esquema GitLab Flow](./img/GitLab_Flow.jpg)
+GitLab Flow representa una alternativa o extensión de los enfoques de GitHub Flow y Git Flow, surgiendo para abordar las limitaciones percibidas en ambos flujos. Aunque GitHub establece que todo lo que está en la rama "master" debe ser desplegado, hay situaciones en las que esto no es factible o necesario. Por ejemplo, en aplicaciones iOS que deben pasar por la validación de la App Store, o cuando se necesitan ventanas de despliegue específicas debido a requisitos del cliente.
+
+Este flujo propone el uso de la rama "master", ramas de características y ramas de entorno. Una vez que se completa una característica, se realiza una solicitud de fusión (merge request) hacia la rama "master". Cuando la rama "master" acumula varias características, se realiza una solicitud de fusión hacia preproducción con el conjunto de características anteriores, las cuales, a su vez, son candidatas para pasar a producción mediante otra solicitud de fusión. Esta metodología asegura una alta estabilidad en el código desplegado en producción, ya que se valida tanto a nivel individual de cada característica como en conjunto al pasar a preproducción o producción.
+
+Este flujo no requiere la creación de ramas de releases, ya que cada entorno se despliega con cada solicitud de fusión aceptada.
+
+**Pros:**
+
+- Alta confianza en la versión de producción.
+- Ciclo de desarrollo muy seguro, ya que se revisa el código tanto a nivel individual en cada característica como a nivel global al pasar a preproducción o producción, lo que ayuda a mitigar el impacto.
+- Evita la sobrecarga de crear releases, etiquetados y fusiones a "develop".
+
+**Contras:**
+
+- Requiere un equipo que valide las solicitudes de fusión tanto de las características como de los diferentes entornos.
+- Tiempo de entrega de valor prolongado, ya que desde la creación y validación de la característica hasta su llegada a producción, debe pasar por múltiples validaciones.
+- Más complejo que GitHub Flow.
+
+### Trunk-based Flow
+
+![Esquema Trunk-based Flow](./img/Trunk-based_Flow.jpg)
+Este flujo comparte similitudes con GitHub Flow, pero introduce la idea de las ramas de versiones y un cambio en la filosofía subyacente. Los principios que lo guían son los siguientes:
+
+- Se fomenta la colaboración directa de los desarrolladores en el tronco principal (o master).
+- Se desalienta la creación de ramas de características utilizando documentación técnica; en su lugar, se sugiere el uso de "features flags" (condicionales en el código) para activar o desactivar nuevas características en función de la complejidad de su evolución.
+- Se recomienda preferentemente el uso de la metodología de Pair-Programming en lugar de las solicitudes de extracción (pull requests).
+- Se crean ramas de versiones para facilitar el despliegue del código en diferentes entornos, como móvil, web, etc.
+
+**Pros:**
+
+- Altamente beneficioso para proyectos que necesitan iterar rápidamente y entregar valor de forma ágil.
+- Es particularmente adecuado para equipos ágiles pequeños.
+- Ideal para equipos que emplean la técnica de Pair-Programming.
+- Funciona eficazmente con equipos experimentados y consolidados.
+
+**Contras:**
+
+- Requiere una responsabilidad elevada por parte de los desarrolladores para mantener un código de alta calidad.
+- El proyecto debe contar con un control de calidad (QA) y un despliegue continuo (CD) muy maduros; de lo contrario, pueden introducirse numerosos errores en el tronco principal.
+- No se recomienda su uso en proyectos de código abierto, ya que pueden requerir una verificación adicional del código.
+
+### Master-only Flow
+
+![Esquema Master-only Flow](./img/Master-only_Flow.jpg)
+El enfoque de este flujo de trabajo se centra en el uso de una sola rama continua. En este caso, emplearemos "master" en esta explicación, ya que es una convención común en Git, aunque también podríamos utilizar otros nombres como "current", "default", "mainline", entre otros.
+
+Cada característica o corrección de errores (hotfix) se desarrolla directamente en esta misma rama. Posteriormente, se realizan pruebas y commits localmente. Una vez que estos cambios son aprobados, se hace un push hacia la rama "master" en el repositorio remoto, desplegándose inmediatamente en producción.
+
+Este flujo está diseñado para proyectos con un equipo de desarrolladores altamente experimentado y que fomentan el pair-programming.
+
+Es crucial utilizar "features flags" para integrar el código en la rama principal y evitar conflictos a lo largo del tiempo.
+
+**Pros:**
+
+- Mantenemos una única rama, lo que simplifica la gestión.
+- El historial del proyecto se mantiene limpio y claro.
+- Con el uso de pair-programming y desarrolladores experimentados, la entrega de valor en producción es inmediata.
+
+**Contras:**
+
+- No es compatible con múltiples entornos productivos.
+- Requiere desarrolladores con experiencia para mantener la estabilidad de la rama principal.
+- El proyecto necesita pautas de código muy estrictas para garantizar la consistencia y calidad del código.
+
+https://www.babelgroup.com/es/Media/Blog/Abril-2021/Cinco-Git-Workflows-para-mejores-proyectos
 
 4. ## FUNCIONAMIENTO DE GIT FLOW
 

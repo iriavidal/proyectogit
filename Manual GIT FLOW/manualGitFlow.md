@@ -12,7 +12,38 @@ Gitflow ha perdido popularidad en beneficio de los flujos de trabajo basados en 
 https://keepcoding.io/blog/que-es-gitflow/
 https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 
-2. VENTAJAS, NECESIDADES Y MOTIVOS
+2. ## VENTAJAS Y MOTIVOS
+
+### Ventajas:
+
+1. **Agilización de procesos**: GitFlow acelera la velocidad de los procesos que conducen a la entrega del código terminado al equipo de pruebas.
+
+2. **Reducción de errores humanos**: el modelo de GitFlow ayuda a disminuir los errores humanos al evitar la mezcla accidental de ramas, ya que estos procesos son manejados directamente por el sistema.
+
+3. **Independencia de funcionalidades**: elimina la necesidad de depender de funcionalidades específicas para llevar a cabo tareas relacionadas con la entrega de código para producción.
+
+4. **Soporte efectivo de fallos**: puede implementarse para mantener un proceso efectivo de soporte de fallos y realizar actualizaciones rápidas.
+
+5. **Trabajo colaborativo**: facilita el trabajo conjunto en una misma característica, lo que lo hace ideal para equipos con varios desarrolladores.
+
+6. **Adecuado para proyectos complejos**: los beneficios de GitFlow lo hacen adecuado para proyectos con niveles altos de complejidad, aunque su manejo puede resultar algo complejo.
+
+### Motivos:
+
+#### Motivos para utilizar Git Flow:
+
+- **Gestión de versiones y colaboración sólidas**: Git Flow es ideal cuando se necesita una gestión de versiones y colaboración estructuradas en un proyecto.
+
+- **Releases regulares y controladas**: es útil si el proyecto requiere hacer releases de manera regular y controlada, proporcionando un marco para organizar y gestionar estas versiones.
+
+#### Motivos para no utilizar Git Flow:
+
+- **Proyectos pequeños o equipos reducidos**: en proyectos pequeños o con un equipo de desarrollo muy reducido, Git Flow puede generar demasiadas ramas y procesos adicionales, lo que puede resultar engorroso y complicado de manejar.
+
+- **Alta incertidumbre o cambios constantes**: no es la mejor opción para proyectos con un alto grado de incertidumbre o cambios constantes, ya que puede resultar difícil seguir el flujo de trabajo establecido, lo que podría generar confusión y obstaculizar la productividad del equipo.
+
+https://keepcoding.io/blog/que-es-gitflow/
+https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
 
 3. WORKFLOWS: ALTERNATIVAS A GIT FLOW
 

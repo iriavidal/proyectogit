@@ -164,7 +164,7 @@ Las ramas que usa Gitflow son las siguientes:
 5. **Hotfix**
    Estas ramas sirven para arreglar aquellos errores que deban ser correjidos rápidamente. Esta rama parte de la rama master, por lo que una vez correjido el problema, debe fusionarse de nuevo con esta añadiendo un nuevo TAG con la versión actualizada. También debe ser fusionada a la rama develop. La existencia de esta rama permite corregir los errores del código principal sin interrumpir el desarrollo de nuevas partes y sin tener que esperar a la próxima publicación para incluir las correcciones.
 
-![Esquema ramas gitflow](./img/esquema.png)
+![Esquema ramas gitflow](./img/esquema.PNG)
 
 5. ## COMANDOS DEL WRAPPER DE GITFLOW
 
@@ -172,15 +172,15 @@ Usar la biblioteca de extensiones de git flow permite reducir las operaciones de
 
 - **git flow init**: inicia un repositorio de git usando las extensiones de git-flow, creando la rama develop directamente.
 
-![Ejemplo de uso de git flow init](./img/init.png)
+![Ejemplo de uso de git flow init](./img/init.PNG)
 
 - **git flow feature start myfeature**: permite crear una nueva rama feature a partir de develop para añadir una nueva funcionalidad al código.
 
-![Ejemplo de uso feature start](./img/feature_start.png)
+![Ejemplo de uso feature start](./img/feature_start.PNG)
 
 - **git flow feature finish myfeature**: este comando cambia la rama a develop y fusiona en ella la feature/myfeature.
 
-![Ejemplo de uso feature finish](./img/feature_finish.png)
+![Ejemplo de uso feature finish](./img/feature_finish.PNG)
 
 - **git flow feature publish myfeature**: publica la feature en el servidor remoto. Equivalente a usar git push.
 
@@ -190,7 +190,7 @@ Usar la biblioteca de extensiones de git flow permite reducir las operaciones de
 
 - **git flow release start 1.0.0**: cambia la rama a develop y desde ella crea una nueva rama release con la versión 1.0.0.
 
-![Ejemplo de uso release start](./img/release_start.png)
+![Ejemplo de uso release start](./img/release_start.PNG)
 
 - **git flow release publish 1.0.0**: publica la release en el servidor remoto. Equivalente a usar git push. s
 
@@ -198,15 +198,15 @@ Usar la biblioteca de extensiones de git flow permite reducir las operaciones de
 
 - **git flow release finish '1.0.0'**: cambia la rama a master y fusiona en esta la release añadiendo como TAG el nombre de esta. También cambia a develop y fusiona en ella la release. Después, la release es eliminada.
 
-![Ejemplo de uso de release finish](./img/release_finish.png)
+![Ejemplo de uso de release finish](./img/release_finish.PNG)
 
 - **git flow hotfix start myfix**: cambia la rama a master y crea una nueva rama hotfix para arreglar el error.
 
-![Ejemplo de uso hotfix start](./img/hotfix_start.png)
+![Ejemplo de uso hotfix start](./img/hotfix_start.PNG)
 
 - **git flow hotfix finish myfix**: cambia la rama a main y fusiona en esta la rama hotfix. También cambia la rama a develop y fusiona la hotfix en ella. Finalmente, se elimina la rama hotfix.
 
-![Ejemplo de uso de hotfix finish](./img/hotfix_finish.png)
+![Ejemplo de uso de hotfix finish](./img/hotfix_finish.PNG)
 
 https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 https://danielkummer.github.io/git-flow-cheatsheet/

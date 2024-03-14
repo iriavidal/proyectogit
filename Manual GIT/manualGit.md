@@ -22,15 +22,17 @@ Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, s
 
 Otro de los aspectos clave del funcionamiento de Git es la integridad, ya que posee un sistema de verificado (checksum) por el cual todos los cambios efectuados en el proyecto serán detectados, impidiendo la pérdida de información. Esta suma de comprobación se realiza mediante el hash SHA-1, el cual también es usado por Git como identificador para guardar toda la información.
 
-***Los tres estados***
+**_Los tres estados_**
 El aspecto más importante para poder entender el funcionamiento interno de GIT, es que presenta tres estados diferentes:
+
 - confirmado **(committed)** : los datos están almacenados localmente.
 - modificado **(modified)** : el fichero o proyecto ha sido modificado pero no se han confirmado los cambios.
 - preparado **(staged)** : todas las modificaciones del proyecto se han registrado en su versión más reciente a la espera de ser confirmadas (hacer commit).
 
 ![Tres estados](./img/tres_estados.jpg)
 
-La existencia de estos tres estados, implica la existencia de tres secciones diferentes dentro de cualquier proyecto en Git, lo que se conoce como  __arquitectura de tres árboles__:
+La existencia de estos tres estados, implica la existencia de tres secciones diferentes dentro de cualquier proyecto en Git, lo que se conoce como **arquitectura de tres árboles**:
+
 - Directorio de trabajo: es una copia de una de las versiones del proyecto, que permite el uso y modificación de los diferentes archivos del proyecto.
 - Área de preparación o "index": es la sección donde se almacena la información que será incluida en el siguiente commit.
 - Directorio de Git: es la principal sección de Git, en la cual se almacenan los metadatos y la base de datos de objetos del proyecto. También es la sección que se copia al realizar una clonación desde un equipo local. Para ser más precisos, el "index" también está incluído dentro del directorio de GIT, como se muestra en la siguiente imagen, pero se separa en la explicación para una mejor comprensión del flujo de trabajo de Git.
@@ -38,6 +40,7 @@ La existencia de estos tres estados, implica la existencia de tres secciones dif
 ![Arquitectura de tres árboles](./img/tres_arboles.jpg)
 
 Por lo tanto, el flujo de trabajo más básico en GIT sería el siguiente:
+
 - Se modifica el proyecto en el directorio de trabajo local.
 - Se preparan los archivos y se añaden al área de preparación o index.
 - Se confirman los cambios (commit) y se realiza una instantánea en el directorio de Git.
@@ -46,7 +49,7 @@ Por lo tanto, el flujo de trabajo más básico en GIT sería el siguiente:
 
 El directorio .git, es la sección más importante de las mencionadas anteriormente, por eso se debe dedicar un apartado específico para explicar su estructura interna. Este directorio está formado, entre otros, por estos componentes:
 
-1. Directorio objects/ 
+1. Directorio objects/
 
 En este directorio se almacenan los objetos, como los datos de los ficheros, los commits, los árboles y las Tags.
 
@@ -74,13 +77,11 @@ En este ficher se guarda la configuración de Git, como equipos remotos, el fluj
 
 Este fichero es el más importante del directorio de Git. Se almacenan todos los cambios a la espera de ser confirmados, en forma de lista ordenada de rutas.
 
-
     https://learn.microsoft.com/es-es/archive/msdn-magazine/2017/august/devops-git-internals-architecture-and-index-files
 
     https://www.siteground.es/kb/estructura-git-contenido-repositorio/#:~:text=El%20index%20de%20GIT%20se,en%20tu%20directorio%20de%20trabajo.
 
     https://ed.team/blog/trabaja-en-dos-o-mas-ramas-de-git-al-mismo-tiempo
-
 
 3. ## Ventajas
 
@@ -88,18 +89,18 @@ GIT se ha convertido en el estándar mundial como sistema de control de versione
 
 Una de las mayores ventajas de Git es que, como se comentó anteriormente, es un sistema distribuido, lo que permite una mayor flexibilidad en la elaboración de proyectos colaborativos. Esta naturaleza distribuida también permite adoptar diferentes estrategias en el flujo de trabajo como Administrador-Integración, Dictador-Teniente, etc.
 
-En el punto anterior, se mencionaba que Git utiliza un checksum para mantener la integridad de los datos. Este sistema de seguridad es altamente beneficioso ya que evita la pérdida de información al estar todos los cambios identificados por el hash. Otro aspecto que mejora la seguridad en git es la forma de trabajar en local, ya que mientras los cambios no se confirman mediante un commit, todas las operaciones y todos los cambios se mantienen en el repositorio local, lo cual permite corregir errores y evitar la corrupción de los datos. 
+En el punto anterior, se mencionaba que Git utiliza un checksum para mantener la integridad de los datos. Este sistema de seguridad es altamente beneficioso ya que evita la pérdida de información al estar todos los cambios identificados por el hash. Otro aspecto que mejora la seguridad en git es la forma de trabajar en local, ya que mientras los cambios no se confirman mediante un commit, todas las operaciones y todos los cambios se mantienen en el repositorio local, lo cual permite corregir errores y evitar la corrupción de los datos.
 
-Otra de las ventajas de Git, es la forma en la que se manejan los cambios, almacenándolos como instantáneas en un sistema de miniaturas. Esto, junto al uso del almacenamiento local, mejora la velocidad y la eficiencia al realizar diferentes operaciones, como commit o merge. Además, el hecho de que se almacenen instantáneas incrementales de todos los cambios realizados, permite revertir el trabajo a versiones anteriores pudiendo solucionar errores con facilidad. 
+Otra de las ventajas de Git, es la forma en la que se manejan los cambios, almacenándolos como instantáneas en un sistema de miniaturas. Esto, junto al uso del almacenamiento local, mejora la velocidad y la eficiencia al realizar diferentes operaciones, como commit o merge. Además, el hecho de que se almacenen instantáneas incrementales de todos los cambios realizados, permite revertir el trabajo a versiones anteriores pudiendo solucionar errores con facilidad.
 
-La existencia de ramas y su manejo sencillo permite la elaboración en pararelo de diferentes partes del proyecto, pudiendo dividir el trabajo de forma más eficiente y facilitando el trabajo colaborativo entre diferentes equipos en proyectos de gran envergadura. 
+La existencia de ramas y su manejo sencillo permite la elaboración en pararelo de diferentes partes del proyecto, pudiendo dividir el trabajo de forma más eficiente y facilitando el trabajo colaborativo entre diferentes equipos en proyectos de gran envergadura.
 
-Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto. 
+Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto.
 
     https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos
 
-
-4. **Comandos básicos**
+4. **Comandos GIT**
+   4.1. **COMANDOS BÁSICOS**
 
 ### CONFIGURACIÓN DE GIT (GIT CONFIG)
 
@@ -124,6 +125,10 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 - **git add .**: añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.
 - **git remote add "repositorio-remoto" "url"**: crea un enlace con el nombre "repositorio-remoto" a un repositorio remoto ubicado en la dirección "url".
 
+### MOSTRAR ESTADO DE UN REPOSITORIO (GIT STATUS)
+
+- **git status**: muestra el estado de los cambios en el repositorio desde la última versión guardada.
+
 ### AÑADIR CAMBIOS AL REPOSITORIO (GIT COMMIT)
 
 - **git commit -m "mensaje"**: confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto.
@@ -138,9 +143,7 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 
 ![directorio de trabajo -> área de preparación -> repositorio](./img/flujo_git.png "Flujo de trabajo de Git")
 
-### MOSTRAR ESTADO DE UN REPOSITORIO (GIT STATUS)
-
-- **git status**: muestra el estado de los cambios en el repositorio desde la última versión guardada.
+4.2. **COMANDOS AVANZADOS**
 
 ### MOSTRAR HISTORIAL DE VERSIONES DE UN REPOSITORIO (GIT LOG)
 
@@ -170,8 +173,6 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 - **git branch**: muestra las ramas activas de un repositorio indicando con \* la rama activa en ese momento.
 - **git branch -d "rama"**: elimina la rama de nombre "rama" siempre y cuando haya sido fusionada previamente.
 - **git branch -D "rama"**: elimina la rama de nombre "rama" incluso si no ha sido fusionada. Si la rama no ha sido fusionada previamente se perderán todos los cambios de esa rama.
-
-- **git log**: muestra la historia del repositorio.
 
 - **git checkout "rama"**: actualiza los cheros del directorio de trabajo a la última versión del repositorio correspondiente a la rama rama", y la activa, es decir, HEAD pasa a apuntar al último commit de esta rama.
 - **git checkout -b "rama"**: crea una nueva rama con el nombre "rama" y la activa. Este comando es equivalente aplicar los comandos git branch "rama" y después git checkout "rama".

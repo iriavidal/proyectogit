@@ -9,8 +9,6 @@ Este sistema se caracteriza, además, por incluir múltiples ramas de mayor dura
 
 Gitflow ha perdido popularidad en beneficio de los flujos de trabajo basados en troncos, que ahora se consideran prácticas recomendadas para el desarrollo continuo de software y las prácticas de DevOps. Además, puede ser difícil utilizar Gitflow con CI/CD.
 
-https://keepcoding.io/blog/que-es-gitflow/
-https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 
 2. ## VENTAJAS Y MOTIVOS
 
@@ -41,9 +39,6 @@ https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 - **Proyectos pequeños o equipos reducidos**: en proyectos pequeños o con un equipo de desarrollo muy reducido, Git Flow puede generar demasiadas ramas y procesos adicionales, lo que puede resultar engorroso y complicado de manejar.
 
 - **Alta incertidumbre o cambios constantes**: no es la mejor opción para proyectos con un alto grado de incertidumbre o cambios constantes, ya que puede resultar difícil seguir el flujo de trabajo establecido, lo que podría generar confusión y obstaculizar la productividad del equipo.
-
-https://keepcoding.io/blog/que-es-gitflow/
-https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
 
 3. ## WORKFLOWS: ALTERNATIVAS A GIT FLOW
 
@@ -140,7 +135,6 @@ Es crucial utilizar "features flags" para integrar el código en la rama princip
 - Requiere desarrolladores con experiencia para mantener la estabilidad de la rama principal.
 - El proyecto necesita pautas de código muy estrictas para garantizar la consistencia y calidad del código.
 
-https://www.babelgroup.com/es/Media/Blog/Abril-2021/Cinco-Git-Workflows-para-mejores-proyectos
 
 4. ## FUNCIONAMIENTO DE GIT FLOW
 
@@ -208,5 +202,15 @@ Usar la biblioteca de extensiones de git flow permite reducir las operaciones de
 
 ![Ejemplo de uso de hotfix finish](./img/hotfix_finish.png)
 
-https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
-https://danielkummer.github.io/git-flow-cheatsheet/
+
+6. ## BIBLIOGRAFÍA
+
+Atlassian. (s/f). Flujo de trabajo de Gitflow. Atlassian. Recuperado el 14 de marzo de 2024, de https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
+
+Cinco Git Workflows para mejorar nuestros proyectos. (2021, abril 30). Babelgroup.com. https://www.babelgroup.com/es/Media/Blog/Abril-2021/Cinco-Git-Workflows-para-mejores-proyectos
+
+Git-flow cheatsheet. (s/f). Github.Io. Recuperado el 14 de marzo de 2024, de https://danielkummer.github.io/git-flow-cheatsheet/
+
+Isla, A. (2022, diciembre 24). ¿Por qué es una buena idea utilizar Git Flow? Medium. https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
+
+¿Qué es GitFlow? (2022, julio 21). KeepCoding Bootcamps. https://keepcoding.io/blog/que-es-gitflow/

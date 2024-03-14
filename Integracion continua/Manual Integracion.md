@@ -13,12 +13,13 @@ La integración continua consta, como se indicó anteriormente, de una serie de 
 
 - Despliegue continuo: de forma automática, se sube al servidor de pruebas de producción, usando herramientas como Hugo. 
 
-https://www.ibm.com/mx-es/topics/continuous-deployment#:~:text=el%20siguiente%20paso-,%C2%BFQu%C3%A9%20es%20la%20implementaci%C3%B3n%20continua%3F,una%20serie%20de%20pruebas%20predefinidas.
-
-https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
-
 2. HERRAMIENTAS
 
 
 3. IMPLEMENTACIÓN
 
+4. ## BIBLIOGRAFÍA
+
+Atlassian. (s/f). Tutorial sobre implementación continua. Atlassian. Recuperado el 14 de marzo de 2024, de https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
+
+¿Qué es la implementación continua? (s/f). Ibm.com. Recuperado el 14 de marzo de 2024, de https://www.ibm.com/mx-es/topics/continuous-deployment

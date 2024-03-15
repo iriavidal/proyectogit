@@ -2,7 +2,18 @@
 
 ## ÍNDICE DE CONTENIDOS
 
-1. **Conceptos básicos**
+1. Conceptos básicos
+2. Funcionamiento de GIT
+3. Ventajas de GIT
+4. Comandos de GIT
+   4.1. Comandos básicos
+   4.2. Comandos avanzados
+5. Clientes de GIT
+6. Integración con otras herramientas
+7. Bibliografía
+
+
+1. ## CONCEPTOS BÁSICOS
 
 Este manual ofrece una breve explicación para aprender a usar GIT como sistema de control de versiones, tratando diferentes puntos, como sus ventajas, características y comandos básicos.
 
@@ -14,7 +25,7 @@ Los sistemas de control de versiones o VCS permiten registrar todos los cambios 
 
 Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sistemas centralizados a, finalmente, sistemas distribuidos como es el caso de GIT. Estos últimos han supuesto un avance con respecto a los sistemas anteriores ya que, debido a su funcionamiento, solucionaron muchos de los problemas que acarreaban hasta ese momento los sistemas centralizados, como la pérdida de datos o la incapacidad de trabajar en el proyecto en caso de que se cayese el servidor donde estaba alojado.
 
-2. ## Funcionamiento
+2. ## FUNCIONAMIENTO
 
 Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, sino que realiza una instantánea de esa versión guardando su referencia.
 
@@ -22,7 +33,7 @@ Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, s
 
 Otro de los aspectos clave del funcionamiento de Git es la integridad, ya que posee un sistema de verificado (checksum) por el cual todos los cambios efectuados en el proyecto serán detectados, impidiendo la pérdida de información. Esta suma de comprobación se realiza mediante el hash SHA-1, el cual también es usado por Git como identificador para guardar toda la información.
 
-**_Los tres estados_**
+### _Los tres estados_
 El aspecto más importante para poder entender el funcionamiento interno de GIT, es que presenta tres estados diferentes:
 
 - confirmado **(committed)** : los datos están almacenados localmente.
@@ -78,7 +89,7 @@ En este ficher se guarda la configuración de Git, como equipos remotos, el fluj
 Este fichero es el más importante del directorio de Git. Se almacenan todos los cambios a la espera de ser confirmados, en forma de lista ordenada de rutas.
 
 
-3. ## Ventajas
+3. ## VENTAJAS
 
 GIT se ha convertido en el estándar mundial como sistema de control de versiones debido a las numerosas ventajas que aporta con respecto a otros sistemas anteriores. El hecho de ser un programa de código abierto y gratuito, ha favorecido que se haya formalizado como una herramienta imprescindible para empresas y particulares para el desarrollo de proyectos.
 
@@ -92,7 +103,7 @@ La existencia de ramas y su manejo sencillo permite la elaboración en pararelo 
 
 Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto.
 
-4. **Comandos GIT**
+4. ## COMANDOS DE GIT
    4.1. **COMANDOS BÁSICOS**
 
 ### CONFIGURACIÓN DE GIT (GIT CONFIG)
@@ -182,8 +193,9 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 
 
 
-5. **Distintos tipos de clientes**
-   Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
+5. ## CLIENTES EN GIT
+
+Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
 
 - **Interfaz de línea de comandos (CLI)**: éste es el cliente original de Git y proporciona acceso completo a todas las funcionalidades de Git a través de comandos de texto en la línea de comandos _(para información sobre comandos véase el punto 4 de este manual)_. Se caracteriza por su mayor potencia y flexibilidad.
   _Ventajas_: como antes mencionado, la potencia y flexibilidad, pero también a mayores su eficiencia y rapidez.
@@ -198,7 +210,7 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
   _Inconvenientes_: dependencia del IDE.
 
  
-6. Integración con otras herramientas
+6. ## INTEGRACIÓN CON OTRAS HERRAMIENTAS
    Git es una herramienta de control de versiones distribuido que proporciona potentes capacidades de seguimiento de cambios y colaboración. Sin embargo, su valor se maximiza cuando se integra con otras herramientas y tecnologías que complementan su funcionalidad y mejoran el flujo de trabajo del equipo y la colaboración en proyectos.
 
 Diferentes tipos de integraciones:

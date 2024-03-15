@@ -77,11 +77,6 @@ En este ficher se guarda la configuración de Git, como equipos remotos, el fluj
 
 Este fichero es el más importante del directorio de Git. Se almacenan todos los cambios a la espera de ser confirmados, en forma de lista ordenada de rutas.
 
-    https://learn.microsoft.com/es-es/archive/msdn-magazine/2017/august/devops-git-internals-architecture-and-index-files
-
-    https://www.siteground.es/kb/estructura-git-contenido-repositorio/#:~:text=El%20index%20de%20GIT%20se,en%20tu%20directorio%20de%20trabajo.
-
-    https://ed.team/blog/trabaja-en-dos-o-mas-ramas-de-git-al-mismo-tiempo
 
 3. ## Ventajas
 
@@ -96,8 +91,6 @@ Otra de las ventajas de Git, es la forma en la que se manejan los cambios, almac
 La existencia de ramas y su manejo sencillo permite la elaboración en pararelo de diferentes partes del proyecto, pudiendo dividir el trabajo de forma más eficiente y facilitando el trabajo colaborativo entre diferentes equipos en proyectos de gran envergadura.
 
 Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto.
-
-    https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos
 
 4. **Comandos GIT**
    4.1. **COMANDOS BÁSICOS**
@@ -187,7 +180,7 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 
 (Es útil mencionar que antes de ejecutar git push, es recomendable ejecutar git pull o git fetch para asegurarse de que el repositorio local esté actualizado con los cambios más recientes del repositorio remoto)
 
-https://aprendeconalf.es/docencia/git/manual/manual-git.pdf
+
 
 5. **Distintos tipos de clientes**
    Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
@@ -204,9 +197,7 @@ https://aprendeconalf.es/docencia/git/manual/manual-git.pdf
   _Ventajas_: integración perfecta lo que permite la fluidez del flujo de trabajo. También podemos encontrar funcionalidades adicionales.
   _Inconvenientes_: dependencia del IDE.
 
-  https://git-scm.com/book/es/v2/Ap%C3%A9ndice-A%3A-Git-en-otros-entornos-Interfaces-gr%C3%A1ficas
-  https://git-scm.com/book/es/v2/Ap%C3%A9ndice-B%3A-Integrando-Git-en-tus-Aplicaciones-Git-mediante-L%C3%ADnea-de-Comandos
-
+ 
 6. Integración con otras herramientas
    Git es una herramienta de control de versiones distribuido que proporciona potentes capacidades de seguimiento de cambios y colaboración. Sin embargo, su valor se maximiza cuando se integra con otras herramientas y tecnologías que complementan su funcionalidad y mejoran el flujo de trabajo del equipo y la colaboración en proyectos.
 
@@ -226,4 +217,23 @@ Diferentes tipos de integraciones:
 
 - **Integración con herramientas de revisión de código**: Git se integra con herramientas de revisión de código como **Gerrit, Crucible, Review Board**, entre otras. Estas herramientas facilitan la revisión y discusión de cambios de código dentro del contexto de un repositorio Git.
 
-https://git-scm.com/book/es/v2/Git-y-Otros-Sistemas-Git-como-Cliente
+
+7. ## BIBLIOGRAFÍA
+
+- Chacon, S. (2009). Pro Git (1a ed.). APress.
+
+- De versiones, S. de C. de V. S. de C. (s/f). Introducción a GITIntroducción a GIT. Aprendeconalf.es. Recuperado el 14 de marzo de 2024, de https://aprendeconalf.es/docencia/git/manual/manual-git.pdf
+
+- DevOps, aspectos internos de GIT: arquitectura y archivos de índice. (s/f). Microsoft.com. Recuperado el 14 de marzo de 2024, de https://learn.microsoft.com/es-es/archive/msdn-magazine/2017/august/devops-git-internals-architecture-and-index-files
+
+- Git - Flujos de trabajo distribuidos. (s/f). Git-scm.com. Recuperado el 14 de marzo de 2024, de https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos
+
+- Git - git como cliente. (s/f). Git-scm.com. Recuperado el 14 de marzo de 2024, de https://git-scm.com/book/es/v2/Git-y-Otros-Sistemas-Git-como-Cliente
+
+- Git - Git mediante Línea de Comandos. (s/f). Git-scm.com. Recuperado el 14 de marzo de 2024, de https://git-scm.com/book/es/v2/Ap%C3%A9ndice-B%3A-Integrando-Git-en-tus-Aplicaciones-Git-mediante-L%C3%ADnea-de-Comandos
+
+- Git - interfaces gráficas. (s/f). Git-scm.com. Recuperado el 14 de marzo de 2024, de https://git-scm.com/book/es/v2/Ap%C3%A9ndice-A%3A-Git-en-otros-entornos-Interfaces-gr%C3%A1ficas
+
+- Hosting, S. W. (s/f). ¿Cómo estructura GIT el contenido del repositorio? Recursos de conocimiento de SiteGround. Recuperado el 14 de marzo de 2024, de https://www.siteground.es/kb/estructura-git-contenido-repositorio/
+
+- Trabaja en dos (o más) ramas de git al mismo tiempo. (s/f). ..Ed.team. Recuperado el 14 de marzo de 2024, de https://ed.team/blog/trabaja-en-dos-o-mas-ramas-de-git-al-mismo-tiempo

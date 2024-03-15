@@ -11,11 +11,7 @@ La integración continua consta, como se indicó anteriormente, de una serie de 
 
 - Entrega continua: en este paso, se incorporan los cambios que se incluirán en la publicación aunque pero no se suben al server de pruebas de producción.
 
-- Despliegue continuo: de forma automática, se sube al servidor de pruebas de producción, usando herramientas como Hugo.
-
-https://www.ibm.com/mx-es/topics/continuous-deployment#:~:text=el%20siguiente%20paso-,%C2%BFQu%C3%A9%20es%20la%20implementaci%C3%B3n%20continua%3F,una%20serie%20de%20pruebas%20predefinidas.
-
-https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
+- Despliegue continuo: de forma automática, se sube al servidor de pruebas de producción, usando herramientas como Hugo. 
 
 2. HERRAMIENTAS
 
@@ -60,3 +56,4 @@ https://docs.gitlab.com/ee/ci/examples/
 https://docs.gitlab.com/ee/ci/runners/index.html
 
 3. IMPLEMENTACIÓN
+

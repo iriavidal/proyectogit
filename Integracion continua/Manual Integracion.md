@@ -20,6 +20,18 @@ La integración continua consta, como se indicó anteriormente, de una serie de 
 
 4. ## BIBLIOGRAFÍA
 
-Atlassian. (s/f). Tutorial sobre implementación continua. Atlassian. Recuperado el 14 de marzo de 2024, de https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
+Atlassian. (s/f). Tutorial sobre implementación continua. Atlassian. Recuperado el 15 de marzo de 2024, de https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
 
-¿Qué es la implementación continua? (s/f). Ibm.com. Recuperado el 14 de marzo de 2024, de https://www.ibm.com/mx-es/topics/continuous-deployment
+Create a GitLab Pages deployment for a static site. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ui.html
+
+GitLab CI/CD examples. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/ee/ci/examples/
+
+GitLab runner. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/runner/
+
+Izertis. (2017, marzo 3). Integración Continua rápida y sencilla con GitLab CI. Solid GEAR. https://ahorasomos.izertis.com/solidgear/gitlab_countinuous_integration_intro/
+
+¿Qué es la implementación continua? (s/f). Ibm.com. Recuperado el 15 de marzo de 2024, de https://www.ibm.com/mx-es/topics/continuous-deployment
+
+¿Qué es una tubería CI/CD? - Software Check Point. (2021, junio 16). Check Point Software. https://www.checkpoint.com/es/cyber-hub/cloud-security/devsecops/what-is-a-ci-cd-pipeline/
+
+Runner SaaS. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/ee/ci/runners/index.html

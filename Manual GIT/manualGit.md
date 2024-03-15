@@ -13,7 +13,7 @@
 7. Bibliografía
 
 
-1. ## CONCEPTOS BÁSICOS
+## 1. CONCEPTOS BÁSICOS
 
 Este manual ofrece una breve explicación para aprender a usar GIT como sistema de control de versiones, tratando diferentes puntos, como sus ventajas, características y comandos básicos.
 
@@ -25,7 +25,7 @@ Los sistemas de control de versiones o VCS permiten registrar todos los cambios 
 
 Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sistemas centralizados a, finalmente, sistemas distribuidos como es el caso de GIT. Estos últimos han supuesto un avance con respecto a los sistemas anteriores ya que, debido a su funcionamiento, solucionaron muchos de los problemas que acarreaban hasta ese momento los sistemas centralizados, como la pérdida de datos o la incapacidad de trabajar en el proyecto en caso de que se cayese el servidor donde estaba alojado.
 
-2. ## FUNCIONAMIENTO
+## 2. FUNCIONAMIENTO
 
 Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, sino que realiza una instantánea de esa versión guardando su referencia.
 
@@ -89,7 +89,7 @@ En este ficher se guarda la configuración de Git, como equipos remotos, el fluj
 Este fichero es el más importante del directorio de Git. Se almacenan todos los cambios a la espera de ser confirmados, en forma de lista ordenada de rutas.
 
 
-3. ## VENTAJAS
+## 3. VENTAJAS
 
 GIT se ha convertido en el estándar mundial como sistema de control de versiones debido a las numerosas ventajas que aporta con respecto a otros sistemas anteriores. El hecho de ser un programa de código abierto y gratuito, ha favorecido que se haya formalizado como una herramienta imprescindible para empresas y particulares para el desarrollo de proyectos.
 
@@ -103,7 +103,7 @@ La existencia de ramas y su manejo sencillo permite la elaboración en pararelo 
 
 Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite el trabajo de forma remota, facilitando el trabajo colaborativo y la productividad de los equipos de desarrollo. Además, existen extensiones y pluggins para el uso de git en diferentes herramientas y softwares de desarrollo como Visual Studio o Eclipse que facilitan el control de los cambios durante el desarrollo del proyecto.
 
-4. ## COMANDOS DE GIT
+## 4. COMANDOS DE GIT
    4.1. **COMANDOS BÁSICOS**
 
 ### CONFIGURACIÓN DE GIT (GIT CONFIG)
@@ -193,7 +193,7 @@ Gracias a la integración de Git en servidores como GitHub o Gitlab, se permite 
 
 
 
-5. ## CLIENTES EN GIT
+## 5. CLIENTES EN GIT
 
 Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar para interactuar con Git y gestionar sus respositorios.
 
@@ -210,7 +210,7 @@ Un cliente GIT es una interfaz o herramienta que los usuarios pueden utilizar pa
   _Inconvenientes_: dependencia del IDE.
 
  
-6. ## INTEGRACIÓN CON OTRAS HERRAMIENTAS
+## 6. INTEGRACIÓN CON OTRAS HERRAMIENTAS
    Git es una herramienta de control de versiones distribuido que proporciona potentes capacidades de seguimiento de cambios y colaboración. Sin embargo, su valor se maximiza cuando se integra con otras herramientas y tecnologías que complementan su funcionalidad y mejoran el flujo de trabajo del equipo y la colaboración en proyectos.
 
 Diferentes tipos de integraciones:
@@ -230,7 +230,7 @@ Diferentes tipos de integraciones:
 - **Integración con herramientas de revisión de código**: Git se integra con herramientas de revisión de código como **Gerrit, Crucible, Review Board**, entre otras. Estas herramientas facilitan la revisión y discusión de cambios de código dentro del contexto de un repositorio Git.
 
 
-7. ## BIBLIOGRAFÍA
+## 7. BIBLIOGRAFÍA
 
 - Chacon, S. (2009). Pro Git (1a ed.). APress.
 

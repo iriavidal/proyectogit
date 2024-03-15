@@ -8,7 +8,7 @@
 3. Implementación
 4. Bibliografía 
 
-1. ## INTEGRACIÓN CONTINUA
+## 1. INTEGRACIÓN CONTINUA
 
 La integración continua es un sistema que permite automatizar el proceso de desarrollo de software, de forma que cuando se añaden nuevas funcionalidades o se realizan cambios sobre este, se realizan de forma automática una serie de pasos: la incorporación de los cambios, las pruebas automáticas y el despliegue continuo.
 Este sistema permite una mayor flexibilidad y facilidad en el trabajo colaborativo y en la elaboración de proyectos complejos o de larga duración, ya que mejora la comunicación entre los equipos y acorta los tiempos de desarrollo al tener procesos automatizados.
@@ -19,7 +19,7 @@ La integración continua consta, como se indicó anteriormente, de una serie de 
 
 - Despliegue continuo: de forma automática, se sube al servidor de pruebas de producción, usando herramientas como Hugo. 
 
-2. ## HERRAMIENTAS
+## 2. HERRAMIENTAS
 
 - **Runners**:
   Es una entidad que ejecuta los trabajos definidos en los pipelines de CI/CD. Es decir, es un agente que se encarga de llevar a cabo las tareas automatizadas que se han configurado en el proceso de integración continua.
@@ -55,7 +55,7 @@ Algunos ejemplos comunes de stages en un pipeline:
 ![Stages](./img/stages.png)
 
 
-3. ## IMPLEMENTACIÓN
+## 3. IMPLEMENTACIÓN
 
 En este apartado del manual se explicará brevemente, apoyándose con imágenes de ejemplo, cómo se realiza la configuración de la integracion continua desde GitLab.
 
@@ -121,7 +121,7 @@ En al siguiente imagen se muestra el runner con la pipeline del proyecto, donde 
 
 ![Resultado Final](./img/11.png)
 
-4. ## BIBLIOGRAFÍA
+## 4. BIBLIOGRAFÍA
 
 Atlassian. (s/f). Tutorial sobre implementación continua. Atlassian. Recuperado el 15 de marzo de 2024, de https://www.atlassian.com/es/devops/continuous-delivery-tutorials/continuous-deployment-tutorial
 

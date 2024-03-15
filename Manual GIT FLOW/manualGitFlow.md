@@ -9,7 +9,7 @@
 5. Comandos de Git-Flow
 6. Bibliografía
 
-1. ## INTRODUCCIÓN
+## 1. INTRODUCCIÓN
    GitFlow se define como un sistema de branching o ramificación o modelo de manejo de ramas en Git, en el que se usan las ramas principales y la feature. De modo que la rama feature la crean los desarrolladores para fusionarla con la rama principal, únicamente cuando cumpla con sus labores.
 
 Este sistema se caracteriza, además, por incluir múltiples ramas de mayor duración y más commit o confirmaciones.
@@ -17,7 +17,7 @@ Este sistema se caracteriza, además, por incluir múltiples ramas de mayor dura
 Gitflow ha perdido popularidad en beneficio de los flujos de trabajo basados en troncos, que ahora se consideran prácticas recomendadas para el desarrollo continuo de software y las prácticas de DevOps. Además, puede ser difícil utilizar Gitflow con CI/CD.
 
 
-2. ## VENTAJAS Y MOTIVOS
+## 2. VENTAJAS Y MOTIVOS
 
 ### Ventajas:
 
@@ -46,7 +46,7 @@ Gitflow ha perdido popularidad en beneficio de los flujos de trabajo basados en 
 
 - **Alta incertidumbre o cambios constantes**: no es la mejor opción para proyectos con un alto grado de incertidumbre o cambios constantes, ya que puede resultar difícil seguir el flujo de trabajo establecido, lo que podría generar confusión y obstaculizar la productividad del equipo.
 
-3. ## WORKFLOWS: ALTERNATIVAS A GIT FLOW
+## 3. WORKFLOWS: ALTERNATIVAS A GIT FLOW
 
 Existen diversos workflows alternativos a Git Flow que ofrecen enfoques diferentes para la gestión de ramas y versiones en proyectos de desarrollo de software. Estos workflows, adaptados a las necesidades específicas de cada equipo o proyecto, pueden proporcionar una mayor flexibilidad y eficiencia en el flujo de trabajo colaborativo.
 
@@ -142,7 +142,7 @@ Es crucial utilizar "features flags" para integrar el código en la rama princip
 - El proyecto necesita pautas de código muy estrictas para garantizar la consistencia y calidad del código.
 
 
-4. ## FUNCIONAMIENTO DE GIT FLOW
+## 4. FUNCIONAMIENTO DE GIT FLOW
 
 Gitflow se basa en la existencia y utilización de distintas ramas, cada una con un rol determinado, durante el desarrollo de un proyecto. De esta forma, no se trabaja únicamente sobre la rama master permitiendo un flujo de trabajo más flexible y con menos errores al hacer merge, donde cada equipo se puede centrar en el desarrollo de una parte sin afectar al trabajo de los demás.
 
@@ -166,7 +166,7 @@ Las ramas que usa Gitflow son las siguientes:
 
 ![Esquema ramas gitflow](./img/esquema.PNG)
 
-5. ## COMANDOS DEL WRAPPER DE GITFLOW
+## 5. COMANDOS DEL WRAPPER DE GITFLOW
 
 Usar la biblioteca de extensiones de git flow permite reducir las operaciones de git, ya que agrupa diferentes comandos en una sola instrucción.
 
@@ -209,7 +209,7 @@ Usar la biblioteca de extensiones de git flow permite reducir las operaciones de
 ![Ejemplo de uso de hotfix finish](./img/hotfix_finish.PNG)
 
 
-6. ## BIBLIOGRAFÍA
+## 6. BIBLIOGRAFÍA
 
 Atlassian. (s/f). Flujo de trabajo de Gitflow. Atlassian. Recuperado el 14 de marzo de 2024, de https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
 

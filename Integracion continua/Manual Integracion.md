@@ -1,3 +1,4 @@
+<!--->
 # MANUAL DE INTEGRACIÓN CONTINUA
 
 ## ÍNDICE DE CONTENIDOS
@@ -76,3 +77,4 @@ Izertis. (2017, marzo 3). Integración Continua rápida y sencilla con GitLab CI
 ¿Qué es una tubería CI/CD? - Software Check Point. (2021, junio 16). Check Point Software. https://www.checkpoint.com/es/cyber-hub/cloud-security/devsecops/what-is-a-ci-cd-pipeline/
 
 Runner SaaS. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/ee/ci/runners/index.html
+-->

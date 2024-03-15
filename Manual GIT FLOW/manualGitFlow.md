@@ -1,4 +1,4 @@
-# MANUAL DE GIT FLOW
+<!--# MANUAL DE GIT FLOW
 
 ## ÍNDICE DE CONTENIDOS
 
@@ -214,3 +214,4 @@ Git-flow cheatsheet. (s/f). Github.Io. Recuperado el 14 de marzo de 2024, de htt
 Isla, A. (2022, diciembre 24). ¿Por qué es una buena idea utilizar Git Flow? Medium. https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
 
 ¿Qué es GitFlow? (2022, julio 21). KeepCoding Bootcamps. https://keepcoding.io/blog/que-es-gitflow/
+-->

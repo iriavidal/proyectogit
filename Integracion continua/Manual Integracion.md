@@ -1,4 +1,4 @@
-<!--->
+
 # MANUAL DE INTEGRACIÓN CONTINUA
 
 ## ÍNDICE DE CONTENIDOS
@@ -49,16 +49,72 @@ Algunos ejemplos comunes de stages en un pipeline:
 
 ![Stages](./img/stages.png)
 
-https://www.checkpoint.com/es/cyber-hub/cloud-security/devsecops/what-is-a-ci-cd-pipeline/
-https://ahorasomos.izertis.com/solidgear/gitlab_countinuous_integration_intro/
-https://docs.gitlab.com/runner/
-https://docs.gitlab.com/ee/user/project/pages/getting_started/pages_ui.html
-https://docs.gitlab.com/ee/ci/examples/
-https://docs.gitlab.com/ee/ci/runners/index.html
 
-3. IMPLEMENTACIÓN
+3. ## IMPLEMENTACIÓN
 
+En este apartado del manual se explicará brevemente, apoyándose con imágenes de ejemplo, cómo se realiza la configuración de la integracion continua desde GitLab.
 
+1. **Creación del runner en Gitlab**
+
+El primer paso consiste en la creación del runner desde Gitlab.
+
+![Runner en Gitlab](./img/1.png)
+
+Para poder continuar con el proceso, se usará una MV Debian12 para que sirva de entorno de pruebas. 
+
+2. **Instalación del binario en la MV**
+
+Se realiza la instalación del ejecutable que contiene el gitlab runner en la máquina virtual como se muestra en la siguiente imagen. 
+
+![Binario](./img/3.png)
+
+3. **Se le añaden permisos de ejecución**
+
+Para que se pueda ejecutar correctamente, se añaden los permisos de ejecución al runner.
+
+![Permisos](./img/4.png)
+
+4. **Creación del usuario para gitlab runner**
+
+Se crea el usuario "Gitlab Runner".
+
+![Usuario gitlab runner](./img/5.png)
+
+5. **Instalación del Runner**
+
+Se instala el runner indicando el usuario de gitlab runner anteriormente creado. Una vez realizada la instalación, se inicia el runner. 
+
+![Inicio del runner](./img/6.png)
+
+6. **Configuración**
+
+Se registró un nuevo corredor de GitLab en el sistema local. Se proporcionó la URL de la instancia de GitLab, el token de registro y un nombre para el corredor (proyectogit_hugo). Se eligió el tipo de ejecutor como docker y se especificó la imagen Docker predeterminada (ruby:2.7) que utilizará el corredor para ejecutar trabajos. Después de completar el registro, el corredor quedó listo para ser iniciado y utilizado en el proyecto de GitLab.
+
+![Configuracion](./img/7.png)
+
+7. **Resultado del runner en Gitlab**
+
+La siguiente imagen muestra que el runner se ha creado correctamente y se visualiza en la página del proyecto de Gitlab.
+
+![Resultado](./img/8.png)
+
+8. **Configuración de gitlab CI/CD**
+
+Se edita el fichero .gitlab-ci.yml para poder configurar la integración continua en el proyecto, especigicando los diferentes stages.
+
+![CICD](./img/9.png)
+
+9. **Configuración de HUGO**
+
+Se edita el fichero config.yaml para configurar el despliegue automático con HUGO.
+
+![HUGO](./img/10.png)
+
+10. **Resultado de la integración continua**
+
+En al siguiente imagen se muestra el runner con la pipeline del proyecto, donde se puede comprobar que al hacer un cambio, se han pasado todos los stages, build, test y deploy. 
+
+![Resultado Final](./img/11.png)
 
 4. ## BIBLIOGRAFÍA
 
@@ -77,4 +133,3 @@ Izertis. (2017, marzo 3). Integración Continua rápida y sencilla con GitLab CI
 ¿Qué es una tubería CI/CD? - Software Check Point. (2021, junio 16). Check Point Software. https://www.checkpoint.com/es/cyber-hub/cloud-security/devsecops/what-is-a-ci-cd-pipeline/
 
 Runner SaaS. (s/f). Gitlab.com. Recuperado el 15 de marzo de 2024, de https://docs.gitlab.com/ee/ci/runners/index.html
--->

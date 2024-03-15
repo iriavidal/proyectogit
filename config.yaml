@@ -1,0 +1,20 @@
+baseURL: "https://proyectogit.com/"
+title: "Proyecto GIT"
+languageCode: "es-es"
+theme: "gohugo-theme-ananke-master"
+
+# Opciones de menú
+menu:
+  main:
+    - identifier: "inicio"
+      name: "Inicio"
+      url: "/"
+    - identifier: "manual-git"
+      name: "Manual Git"
+      url: "/Manual-GIT/manualGit.md"
+    - identifier: "manual-git-flow"
+      name: "Manual Git Flow"
+      url: "/Manual-GIT-FLOW/manualGitFlow.md"
+    - identifier: "manual-integracion"
+      name: "Manual Integración Continua"
+      url: "/Integracion-continua/Manual-Integracion.md"

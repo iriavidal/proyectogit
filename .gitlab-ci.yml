@@ -1,27 +1,23 @@
-# Definición de los stages de la pipeline
 stages:
   - build
   - test
   - deploy
 
-# Configuración del job para construir el sitio web estático con Hugo
 build:
   stage: build
-  image: razonyang/hugo  # Imagen Docker para Hugo
+  image: razonyang/hugo
   script:
-    - hugo  # Construir el sitio web estático
+    - hugo  
   artifacts:
     paths:
-      - public/  # Carpeta donde se guarda el sitio web generado
+      - public/  
 
-# Configuración del job para ejecutar pruebas
 test:
   stage: test
-  image: alpine:latest  # Imagen Docker ligera
+  image: alpine:latest  
   script:
     - echo "Ejecutando pruebas..."  
 
-# Configuración del job para desplegar el sitio web estático
 deploy:
   stage: deploy
   image: alpine:latest  

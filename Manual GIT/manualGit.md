@@ -18,7 +18,7 @@ Los VCS han ido evolucionando a lo largo del tiempo, desde sistemas locales, sis
 
 Git, a diferencia de otros VCS, no guarda las diferencias entre las versiones, sino que realiza una instantánea de esa versión guardando su referencia.
 
-![Manejo de los datos en Git](./img/checkins.png)
+![Manejo de los datos en Git](./img/checkins.PNG)
 
 Otro de los aspectos clave del funcionamiento de Git es la integridad, ya que posee un sistema de verificado (checksum) por el cual todos los cambios efectuados en el proyecto serán detectados, impidiendo la pérdida de información. Esta suma de comprobación se realiza mediante el hash SHA-1, el cual también es usado por Git como identificador para guardar toda la información.
 
@@ -29,7 +29,7 @@ El aspecto más importante para poder entender el funcionamiento interno de GIT,
 - modificado **(modified)** : el fichero o proyecto ha sido modificado pero no se han confirmado los cambios.
 - preparado **(staged)** : todas las modificaciones del proyecto se han registrado en su versión más reciente a la espera de ser confirmadas (hacer commit).
 
-![Tres estados](./img/tres_estados.png)
+![Tres estados](./img/tres_estados.PNG)
 
 La existencia de estos tres estados, implica la existencia de tres secciones diferentes dentro de cualquier proyecto en Git, lo que se conoce como **arquitectura de tres árboles**:
 
@@ -37,7 +37,7 @@ La existencia de estos tres estados, implica la existencia de tres secciones dif
 - Área de preparación o "index": es la sección donde se almacena la información que será incluida en el siguiente commit.
 - Directorio de Git: es la principal sección de Git, en la cual se almacenan los metadatos y la base de datos de objetos del proyecto. También es la sección que se copia al realizar una clonación desde un equipo local. Para ser más precisos, el "index" también está incluído dentro del directorio de GIT, como se muestra en la siguiente imagen, pero se separa en la explicación para una mejor comprensión del flujo de trabajo de Git.
 
-![Arquitectura de tres árboles](./img/tres_arboles.png)
+![Arquitectura de tres árboles](./img/tres_arboles.PNG)
 
 Por lo tanto, el flujo de trabajo más básico en GIT sería el siguiente:
 
@@ -213,7 +213,7 @@ Diferentes tipos de integraciones:
 
 - **Integración con IDEs y editores de código**: Git se integra con IDEs populares como **Visual Studio, IntelliJ IDEA, Eclipse**, así como con editores de código como **Visual Studio Code, Sublime Text, Atom**, entre otros. Estas herramientas proporcionan funcionalidades integradas de control de versiones, como la visualización de historial, la resolución de conflictos y la gestión de ramas.
   Un ejemplo de integración de GIT en Visual Studio Code:
-  ![Visual Studio Code y GIT](vsc.png)
+  ![Visual Studio Code y GIT](./img/vsc.png)
 
 - **Integración con herramientas de revisión de código**: Git se integra con herramientas de revisión de código como **Gerrit, Crucible, Review Board**, entre otras. Estas herramientas facilitan la revisión y discusión de cambios de código dentro del contexto de un repositorio Git.
 

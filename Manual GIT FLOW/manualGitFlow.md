@@ -1,6 +1,13 @@
-<!--# MANUAL DE GIT FLOW
+# MANUAL DE GIT FLOW
 
 ## ÍNDICE DE CONTENIDOS
+
+1. Introducción
+2. Ventajas ymotivos para usar GIT-FLOW
+3. Alternativas a Git-Flow
+4. Funcionamiento de Git-flow
+5. Comandos de Git-Flow
+6. Bibliografía
 
 1. ## INTRODUCCIÓN
    GitFlow se define como un sistema de branching o ramificación o modelo de manejo de ramas en Git, en el que se usan las ramas principales y la feature. De modo que la rama feature la crean los desarrolladores para fusionarla con la rama principal, únicamente cuando cumpla con sus labores.
@@ -26,7 +33,6 @@ Gitflow ha perdido popularidad en beneficio de los flujos de trabajo basados en 
 
 6. **Adecuado para proyectos complejos**: los beneficios de GitFlow lo hacen adecuado para proyectos con niveles altos de complejidad, aunque su manejo puede resultar algo complejo.
 
-### Motivos:
 
 #### Motivos para utilizar Git Flow:
 
@@ -214,4 +220,3 @@ Git-flow cheatsheet. (s/f). Github.Io. Recuperado el 14 de marzo de 2024, de htt
 Isla, A. (2022, diciembre 24). ¿Por qué es una buena idea utilizar Git Flow? Medium. https://willywes.medium.com/por-qu%C3%A9-es-una-buena-idea-utilizar-gitflow-c92c5e7754e0
 
 ¿Qué es GitFlow? (2022, julio 21). KeepCoding Bootcamps. https://keepcoding.io/blog/que-es-gitflow/
--->

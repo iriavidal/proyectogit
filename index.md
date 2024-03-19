@@ -1,20 +1,14 @@
 ---
 title: "Proyecto GIT"
-menu:
-  main:
-    - identifier: "home"
-      name: "Inicio"
-      url: "/"
-    - identifier: "Manual GIT"
-      name: "Manual GIT"
-      url: "/Manual GIT/"
-    - identifier: "Manual GITFLOW"
-      name: "Manual GOTFLOW"
-      url: "/Manual GIT FLOW/"
-    - identifier: "Integracion continua"
-      name: "Integracion continua"
-      url: "/Integracion continua/"
+languageCode: "es-es"
+theme: "gohugo-theme-ananke-master"
 ---
+
+# Enlaces Directos
+
+- [Manual Git](/Manual-GIT/manualGit.md)
+- [Manual Git Flow](/Manual-GIT-FLOW/manualGitFlow.md)
+- [Manual Integración Continua](/Integracion-continua/Manual-Integracion.md)
 
 ## Bienvenido a nuestro proyecto GIT
 

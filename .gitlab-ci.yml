@@ -1,6 +1,6 @@
 variables:
-  DART_SASS_VERSION: 1.71.0
-  HUGO_VERSION: 0.123.8
+  DART_SASS_VERSION: 1.72.0
+  HUGO_VERSION: 0.124.0
   NODE_VERSION: 20.x
   GIT_DEPTH: 0
   GIT_STRATEGY: clone
@@ -40,4 +40,3 @@ pages:
       - public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-
